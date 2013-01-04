@@ -1,3 +1,5 @@
+# Tracking Google Analytics Page Views with Angular.js
+
 ## How?
 
 follow these step:
