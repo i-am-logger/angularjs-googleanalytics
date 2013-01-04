@@ -14,6 +14,6 @@ follow these step:
 
 - Now just have analytics to be injected in your contorller.
 
-``function myCtrl($rootScope, $scope, $http, analytics) {
+	``function myCtrl($rootScope, $scope, $http, analytics) {
 	    ...
 	};``
