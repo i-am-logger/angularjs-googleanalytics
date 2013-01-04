@@ -9,11 +9,11 @@ follow these step:
 
 	``var app = angular.module('myapp', ['analytics']) {
 		...
-	});
+	});``
 
 
 - Now just have analytics to be injected in your contorller.
 
 ``function myCtrl($rootScope, $scope, $http, analytics) {
 	    ...
-	};
+	};``
