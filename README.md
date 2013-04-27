@@ -17,3 +17,5 @@ follow these step:
 	``function myCtrl($rootScope, $scope, $http, analytics) {
 	    ...
 	};``
+
+Code licensed under the The MIT License. 
