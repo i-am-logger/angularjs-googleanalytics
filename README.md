@@ -18,4 +18,4 @@ follow these step:
 	    ...
 	};``
 
-Code licensed under the The MIT License. 
+Code licensed under The MIT License. 
