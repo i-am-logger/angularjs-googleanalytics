@@ -4,18 +4,15 @@
 
 follow these step:
 
-- Set 'YOUR GOOGLE ACCOUNT' in googleanalyticis.js placeholder with your google account id
 - Add the service to your angular js app module:
 
 	``var app = angular.module('myapp', ['analytics']) {
 		...
 	});``
 
+-  Set your analytics code:
 
-- Now just have analytics to be injected in your contorller.
+    ``app.constant('gaKey', 'UA-XXXXXXXX-Y');``
 
-	``function myCtrl($rootScope, $scope, $http, analytics) {
-	    ...
-	};``
 
 Code licensed under The MIT License. 
