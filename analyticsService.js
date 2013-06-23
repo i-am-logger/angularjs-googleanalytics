@@ -16,7 +16,7 @@
         var track = function() {
             $window.ga('send', 'pageview', {
                 location:  $location.absUrl(),
-                page : $location.url
+                page : $location.url()
             });
         };
 
