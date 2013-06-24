@@ -1,6 +1,6 @@
-(function (a){
+(function (){
 
-    var analytics = a.module('analytics', []);
+    var analytics = angular.module('analytics', []);
 
     analytics.constant( 'gaKey', 'XXXXXX-XX' );
 
@@ -22,4 +22,12 @@
 
         $rootScope.$on('$viewContentLoaded', track);
     }]);
-})(angular);
+
+    analytics.service('analytics', ['$window',function($window) {
+
+        trackEvent= function(action, label, value) {
+            $window.ga('send', 'event', action, label, value);
+        }
+
+    }]);
+})();
