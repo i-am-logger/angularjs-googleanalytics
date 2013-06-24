@@ -24,10 +24,11 @@
     }]);
 
     analytics.service('analytics', ['$window',function($window) {
-
-        trackEvent= function(action, label, value) {
-            $window.ga('send', 'event', action, label, value);
-        }
+        return {
+            trackEvent: function(action, label, value) {
+                $window.ga('send', 'event', action, label, value);
+            }
+        };
 
     }]);
 })();
