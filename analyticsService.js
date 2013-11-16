@@ -11,14 +11,6 @@ angular.module('analytics', []).run(['$http', function($http) {
 	s.parentNode.insertBefore(ga, s);
 
 }]).service('analytics', function($rootScope, $window, $location, $routeParams) {
-
-	$rootScope.$on('$viewContentLoaded', track);
-
-	var track = function() {
-		var path = convertPathToQueryString($location.path(), $routeParams)
-		$window._gaq.push(['_trackPageview', path]);
-	};
-	
 	var convertPathToQueryString = function(path, $routeParams) {
 		for (var key in $routeParams) {
 			var queryParam = '/' + $routeParams[key];
@@ -31,4 +23,11 @@ angular.module('analytics', []).run(['$http', function($http) {
 
 		return path + "?" + querystring;
 	};
+
+	var track = function() {
+		var path = convertPathToQueryString($location.path(), $routeParams)
+		$window._gaq.push(['_trackPageview', path]);
+	};
+
+	$rootScope.$on('$viewContentLoaded', track);
 });
