@@ -1,8 +1,8 @@
 var _gaq = _gaq || [];
 
-angular.module('analytics', []).run(['$http', function($http) {
+angular.module('analytics', []).run(['$http', 'GOOGLE_ACCOUNT', function($http, GOOGLE_ACCOUNT) {
 
-	_gaq.push(['_setAccount', 'YOUR GOOGLE ACCOUNT']);
+	_gaq.push(['_setAccount', GOOGLE_ACCOUNT]);
 	_gaq.push(['_trackPageview']);
 
 	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
