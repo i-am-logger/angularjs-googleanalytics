@@ -4,7 +4,7 @@
 
 follow these step:
 
-- Set 'YOUR GOOGLE ACCOUNT' in googleanalyticis.js placeholder with your google account id
+- Create angular constant GOOGLE_ACCOUNT with your google account id (http://docs.angularjs.org/api/auto/object/$provide#constant)
 - Add the service to your angular js app module:
 
 	``var app = angular.module('myapp', ['analytics']) {
